@@ -12,7 +12,7 @@ interface WhatsAppDirectPageProps {
 }
 
 export default function WhatsAppDirectPage({ lead, onWhatsAppClick }: WhatsAppDirectPageProps) {
-  const [whatsappNumber, setWhatsappNumber] = useState('5511999999999');
+  const [whatsappNumber, setWhatsappNumber] = useState('5515981669784');
   const [hasClicked, setHasClicked] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function WhatsAppDirectPage({ lead, onWhatsAppClick }: WhatsAppDi
     if (storedConfig) {
       try {
         const config: IntegrationConfig = JSON.parse(storedConfig);
-        if (config.whatsappNumber) {
+        if (config.whatsappNumber && config.whatsappNumber !== '5511999999999') {
           setWhatsappNumber(config.whatsappNumber);
         }
       } catch (err) {
@@ -58,7 +58,7 @@ export default function WhatsAppDirectPage({ lead, onWhatsAppClick }: WhatsAppDi
         <div className="space-y-3 max-w-lg mx-auto">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-semibold bg-[#25D366]/10 text-[#0f8b3c] border border-[#25D366]/20 uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
-            Formulário Concluído
+            Formulário Preenchido
           </span>
           
           <h1 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 tracking-tight leading-tight">
