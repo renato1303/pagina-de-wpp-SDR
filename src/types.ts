@@ -24,6 +24,7 @@ export interface LeadData {
   utmCampaign?: string;
   device?: string;
   browser?: string;
+  mensagemCustom?: string;
 
   // Real-time Database Fields requested
   status?: 'Novo' | 'Aguardando reunião' | 'Reunião agendada' | 'Reunião realizada' | 'Proposta enviada' | 'Fechado' | 'Perdido';

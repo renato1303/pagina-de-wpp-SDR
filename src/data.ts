@@ -135,17 +135,21 @@ export function validatePhone(phone: string): boolean {
 }
 
 export function buildWhatsAppMessage(lead: LeadData): string {
-  const baseMessage = `Olá, sou ${lead.nome}.
+  if (lead.mensagemCustom) {
+    return encodeURIComponent(lead.mensagemCustom);
+  }
 
-Acabei de preencher o formulário!
+  const baseMessage = `Olá, sou ${lead.nome}.
+Acabei de preencher as informações de qualificação no formulário!
 
 📋 RESUMO DOS MEUS DADOS:
-- Empresa: ${lead.empresa}
-- E-mail: ${lead.email}
-- WhatsApp: ${lead.whatsapp}
-- Segmento: ${lead.segmento}
-- Já trabalha com cacau?: ${lead.trabalhaComCacau || 'Não informado'}
-- Faturamento mensal: ${lead.faturamento}
+• Nome: ${lead.nome}
+• Empresa: ${lead.empresa}
+• E-mail: ${lead.email}
+• WhatsApp: ${lead.whatsapp}
+• Segmento: ${lead.segmento}
+• Já trabalha com cacau?: ${lead.trabalhaComCacau || ''}
+• Faturamento mensal: ${lead.faturamento}
 
 Desejo dar prosseguimento e conversar com o especialista responsável!`;
 

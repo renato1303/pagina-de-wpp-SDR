@@ -30,9 +30,9 @@ export default function WhatsAppDirectPage({ lead, onWhatsAppClick }: WhatsAppDi
   }, []);
 
   const score = lead.leadScore ?? calculateLeadScore(lead);
-  const cleanPhone = whatsappNumber.replace(/\D/g, '');
+  const cleanPhone = whatsappNumber.replace(/\D/g, '') || '5515981669784';
   const encodedMsg = buildWhatsAppMessage({ ...lead, leadScore: score });
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodedMsg}`;
+  const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodedMsg}`;
 
   const handleOpenWhatsApp = () => {
     setHasClicked(true);

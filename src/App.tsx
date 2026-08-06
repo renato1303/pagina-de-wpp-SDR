@@ -39,6 +39,7 @@ export default function App() {
     const segmento = params.get('segmento') || params.get('segment') || '';
     const trabalhaComCacau = params.get('trabalhaComCacau') || params.get('trabalha_com_cacau') || params.get('cacau') || '';
     const faturamento = params.get('faturamento') || params.get('faturamento_mensal') || params.get('revenue') || '';
+    const mensagemCustom = params.get('mensagem') || params.get('mensagemCustom') || '';
 
     const utm_source = params.get('utm_source') || params.get('src') || '';
     const utm_medium = params.get('utm_medium') || '';
@@ -67,6 +68,7 @@ export default function App() {
       segmento: segmento || prev.segmento,
       trabalhaComCacau: trabalhaComCacau || prev.trabalhaComCacau,
       faturamento: faturamento || prev.faturamento,
+      mensagemCustom: mensagemCustom || prev.mensagemCustom,
       utmSource: utm_source || undefined,
       utmMedium: utm_medium || undefined,
       utmCampaign: utm_campaign || undefined,
