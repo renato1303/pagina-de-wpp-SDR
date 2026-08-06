@@ -82,7 +82,7 @@ export const DEFAULT_INTEGRATIONS_CONFIG: IntegrationConfig = {
   gtmId: 'GTM-XXXXXXX',
   googleSheetsUrl: 'https://script.google.com/macros/s/AKfycbyJSBeAgSpjnOhdYfHUZbSCSVuAGjuxMrJPjzohtECTipLlDxZsdjWCRv9Rg-NrIu6h/exec',
   calendlyUrl: 'https://calendly.com/comercial-seracacau/30min',
-  whatsappNumber: '5515991960826',
+  whatsappNumber: '5515981669784',
   adminPassword: 'sensesales@admin',
   thankYouVideoUrl: 'https://vimeo.com/1206543972',
   presenterName: 'nosso especialista',
