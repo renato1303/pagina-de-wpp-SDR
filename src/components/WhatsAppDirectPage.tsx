@@ -12,7 +12,7 @@ interface WhatsAppDirectPageProps {
 }
 
 export default function WhatsAppDirectPage({ lead, onWhatsAppClick }: WhatsAppDirectPageProps) {
-  const [whatsappNumber, setWhatsappNumber] = useState('5515981669784');
+  const [whatsappNumber, setWhatsappNumber] = useState('5515991960826');
   const [hasClicked, setHasClicked] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function WhatsAppDirectPage({ lead, onWhatsAppClick }: WhatsAppDi
   }, []);
 
   const score = lead.leadScore ?? calculateLeadScore(lead);
-  const cleanPhone = whatsappNumber.replace(/\D/g, '') || '5515981669784';
+  const cleanPhone = whatsappNumber.replace(/\D/g, '') || '5515991960826';
   const encodedMsg = buildWhatsAppMessage({ ...lead, leadScore: score });
   const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodedMsg}`;
 
