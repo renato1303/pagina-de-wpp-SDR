@@ -139,19 +139,7 @@ export function buildWhatsAppMessage(lead: LeadData): string {
     return encodeURIComponent(lead.mensagemCustom);
   }
 
-  const baseMessage = `Olá, sou ${lead.nome}.
-Acabei de preencher as informações de qualificação no formulário!
-
-📋 RESUMO DOS MEUS DADOS:
-• Nome: ${lead.nome}
-• Empresa: ${lead.empresa}
-• E-mail: ${lead.email}
-• WhatsApp: ${lead.whatsapp}
-• Segmento: ${lead.segmento}
-• Já trabalha com cacau?: ${lead.trabalhaComCacau || ''}
-• Faturamento mensal: ${lead.faturamento}
-
-Desejo dar prosseguimento e conversar com o especialista responsável!`;
+  const baseMessage = `Olá. tudo bem? Acabei de preencher o formulário da Será Cacau.`;
 
   return encodeURIComponent(baseMessage);
 }
