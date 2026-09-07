@@ -134,11 +134,7 @@ export function validatePhone(phone: string): boolean {
   return digits.length >= 10 && digits.length <= 11;
 }
 
-export function buildWhatsAppMessage(lead: LeadData): string {
-  if (lead.mensagemCustom) {
-    return encodeURIComponent(lead.mensagemCustom);
-  }
-
+export function buildWhatsAppMessage(_lead?: LeadData): string {
   const baseMessage = `Olá. tudo bem? Acabei de preencher o formulário da Será Cacau.`;
 
   return encodeURIComponent(baseMessage);
